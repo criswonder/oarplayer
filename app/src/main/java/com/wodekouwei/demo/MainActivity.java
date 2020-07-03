@@ -25,7 +25,12 @@ public class MainActivity extends AppCompatActivity {
     btn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        String rtmpUrl = et.getText().toString();
+//        String rtmpUrl = et.getText().toString();
+//        String rtmpUrl = "rtmp://live.cctvcj.com/cctvcj/live1";
+//        String rtmpUrl = "rtmp//live.hkstv.hk.lxdns.com/live/hks";
+//        String rtmpUrl = "rtmp://116.213.200.53/tslsChannelLive/PCG0DuD/live";
+//        String rtmpUrl = "rtmp://58.200.131.2:1935/livetv/hunantv";
+        String rtmpUrl = "rtmp://202.69.69.180:443/webcast/bshdlive-pc";
         if (TextUtils.isEmpty(rtmpUrl)) {
           Toast.makeText(MainActivity.this, "请输入播放地址", Toast.LENGTH_SHORT).show();
         } else {

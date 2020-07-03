@@ -148,6 +148,7 @@ void *read_thread(void *data) {
                         oar->metadata->audio_pps = NULL;
                     }
                     oar->metadata->audio_pps = malloc(sizeof(char)*2);
+                    _LOGD("1111oar->metadata->audio_pps=%p",oar->metadata->audio_pps);
                     memcpy(oar->metadata->audio_pps, data+2, 2);
                     oar->metadata->has_audio = 1;
                     if(oar->metadata->has_video){
@@ -189,6 +190,8 @@ void *read_thread(void *data) {
                         oar->metadata->video_extradata = NULL;
                     }
                     oar->metadata->video_extradata = malloc(sizeof(char) * (size-5));
+                    _LOGD("222222oar->metadata->video_extradata=%p",oar->metadata->video_extradata);
+                    if(!oar->metadata->video_extradata)continue;
                     memcpy(oar->metadata->video_extradata, data+5, size-5);
                     oar->metadata->video_extradata_size = size -5;
 
